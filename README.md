@@ -44,3 +44,14 @@ yarn jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-streaming.jar \
   -output mr/output
 ```
 
+or
+
+```
+yarn jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-streaming.jar \
+	-files mapper.py, reducer.py \
+	-mapper "python mapper.py" \
+	-reducer "python reducer.py" \
+	-input raw/input.txt \
+	-output mr/output
+```
+
