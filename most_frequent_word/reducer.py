@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 from operator import itemgetter
 import sys
 
@@ -10,7 +9,7 @@ for line in sys.stdin:
     # remove leading and trailing whitespace
     line = line.strip()
     
-    word, count = line.split('\t', 1)
+    key, word, count = line.split('\t', 2)
     try:
         count = int(count)
     except ValueError:

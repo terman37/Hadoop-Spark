@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 import sys
 
-
-max = 0
-maxword = ""
 # input comes from STDIN (standard input)
 for line in sys.stdin:
     # remove leading and trailing whitespace
@@ -16,8 +13,6 @@ for line in sys.stdin:
         # count was not a number, so silently
         continue
     
-    if count > max:
-        max = count
-        maxword = word
+    key = "key"
     
-print '%s\t%s' % (maxword, max)
+    print '%s\t%s\t%s' % (key, word, count)
