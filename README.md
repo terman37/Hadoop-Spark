@@ -28,6 +28,14 @@ yarn jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-mapreduce-examples.jar 
 
 using python mapper and reducer (wordcount example)
 
+copy mapper and reducer from local to edge:
+
+```
+scp source <host>:dest
+```
+
+run
+
 ```
 yarn jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-streaming.jar \
   -file mapper.py -mapper "python mapper.py" \
