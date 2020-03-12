@@ -76,13 +76,13 @@ CREATE EXTERNAL TABLE IF NOT EXISTS a_jourdan(
   TBLPROPERTIES ('skip.header.line.count' = '1');
 ```
 
-Use query stored in file
+Or Use query stored in file
 
 ```
 !run hive/driver_create_external.hql
 ```
 
-Create ORC table
+Create ORC table (optimized format)
 
 ```
 CREATE TABLE IF NOT EXISTS a_jourdan_orc(
