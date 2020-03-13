@@ -186,6 +186,8 @@ JOIN
 	imdb_title_basics ON qt.tconst = imdb_title_basics.tconst
 JOIN
 	imdb_title_ratings ON imdb_title_ratings.tconst = imdb_title_basics.tconst
+WHERE 
+	imdb_title_basics.titletype = 'movie'
 ORDER BY averagerating DESC
 LIMIT 10;
 ```
@@ -198,16 +200,26 @@ RESULT:
 +-------------------------------------+----------------+
 | Pulp Fiction                        | 8.9            |
 | Kill Bill: The Whole Bloody Affair  | 8.8            |
-| Grave Danger: Part 2                | 8.6            |
-| Grave Danger: Part 1                | 8.6            |
 | Django Unchained                    | 8.4            |
 | Reservoir Dogs                      | 8.3            |
 | Inglourious Basterds                | 8.3            |
 | Kill Bill: Vol. 1                   | 8.1            |
-| Sin City                            | 8.0            |
 | Kill Bill: Vol. 2                   | 8.0            |
+| Sin City                            | 8.0            |
+| The Hateful Eight                   | 7.8            |
+| Grindhouse                          | 7.6            |
 +-------------------------------------+----------------+
 ```
+
+maybe more optimal way:
+
+```
+MOODLE
+
+	
+```
+
+
 
 For the last query, try it in two queries first if you want.
 You'll see that you have to make a join on some array type. Hint: "explode"
