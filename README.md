@@ -117,8 +117,6 @@ SELECT * FROM TOTO JOIN TATA ON TOTO.TOTOID = TATA.TOTOID
 
 
 
-
-
 ### IMDB Queries:
 
 1) Number of titles with duration superior than 2 hours.
