@@ -211,15 +211,49 @@ RESULT:
 +-------------------------------------+----------------+
 ```
 
-maybe more optimal way:
-
-```
-MOODLE
-
-	
-```
-
-
-
 For the last query, try it in two queries first if you want.
 You'll see that you have to make a join on some array type. Hint: "explode"
+
+
+
+#### HBase Shell
+
+- show tables
+
+```
+list
+```
+
+- create table
+
+```
+create 'dsti_ajourdan_imdb_rating','opinion','metadata'
+create 'table_name','col-family-1','col-family-2'...
+```
+
+- Write in table
+
+```
+put 'dsti_ajourdan_imdb_rating','tt0266697-8.2-jourdan','opinion:rating','8.2'
+put 'dsti_ajourdan_imdb_rating','tt0378194-8.5-jourdan','opinion:rating','8.5'
+put 'dsti_ajourdan_imdb_rating','tt0378194-8.5-jourdan','metadata:title','Kill Bill 2'
+
+put 'table_name','rowkey','col-family:column','value'
+```
+
+- read 1 line
+
+```
+get 'dsti_ajourdan_imdb_rating','tt0266697-8.2-ajourdan'
+get 'table_name','rowkey'
+```
+
+- show all table data
+
+```
+scan 'dsti_ajourdan_imdb_rating'
+scan 'table_name'
+```
+
+
+
