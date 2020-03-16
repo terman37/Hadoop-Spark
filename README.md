@@ -1,5 +1,7 @@
 # Hadoop-Spark
 
+## Hadoop
+
 #### Connect to Edge (through VPN)
 
 #### HDFS most common commands
@@ -117,7 +119,7 @@ SELECT * FROM TOTO JOIN TATA ON TOTO.TOTOID = TATA.TOTOID
 
 
 
-### IMDB Queries:
+##### IMDB Queries:
 
 1) Number of titles with duration superior than 2 hours.
 
@@ -268,5 +270,33 @@ scan 'table_name'
 
 ```
 deleteall '<table_name>', '<row_key>'
+```
+
+## SPARK
+
+#### SPARK shell
+
+```
+pyspark
+```
+
+example
+
+```
+rdd1 = sc.parallelize([1,2,3,4])
+rdd1.collect()
+rdd1.take(2)
+```
+
+#### SPARK submit (via command or Oozie)
+
+#### SPARK notebook (Zeppelin)
+
+​	zep-1.au.adaltas.cloud:9995/#/
+
+see notebook
+
+```
+hdfs dfs -ls /learning/data/city_revenue
 ```
 
