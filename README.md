@@ -218,6 +218,12 @@ You'll see that you have to make a join on some array type. Hint: "explode"
 
 #### HBase Shell
 
+- Connect
+
+```bash
+hbase shell
+```
+
 - show tables
 
 ```
@@ -234,9 +240,12 @@ create 'table_name','col-family-1','col-family-2'...
 - Write in table
 
 ```
-put 'dsti_ajourdan_imdb_rating','tt0266697-8.2-jourdan','opinion:rating','8.2'
-put 'dsti_ajourdan_imdb_rating','tt0378194-8.5-jourdan','opinion:rating','8.5'
-put 'dsti_ajourdan_imdb_rating','tt0378194-8.5-jourdan','metadata:title','Kill Bill 2'
+put 'dsti_ajourdan_imdb_rating','tt0266697-8.2-ajourdan','opinion:rating','8.2'
+put 'dsti_ajourdan_imdb_rating','tt0378194-8.5-ajourdan','opinion:rating','8.5'
+put 'dsti_ajourdan_imdb_rating','tt0378194-8.5-ajourdan','metadata:title','Kill Bill 2'
+put 'dsti_ajourdan_imdb_rating','tt0266697-8.2-ajourdan','metadata:title','Kill Bill 1'
+put 'dsti_ajourdan_imdb_rating','tt0378194-8.5-ajourdan','metadata:tconst','tt0378194'
+put 'dsti_ajourdan_imdb_rating','tt0266697-8.2-ajourdan','metadata:title','tt0266697'
 
 put 'table_name','rowkey','col-family:column','value'
 ```
@@ -255,5 +264,9 @@ scan 'dsti_ajourdan_imdb_rating'
 scan 'table_name'
 ```
 
+- delete row
 
+```
+deleteall '<table_name>', '<row_key>'
+```
 
